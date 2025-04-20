@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ii1OrdmRVU8=",
+  "success": true,
+  "projectFilePath": "/Users/Robert/Desktop/Main/quicknotes/QuickNotes.Api/QuickNotes.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/Robert/.nuget/packages/microsoft.aspnetcore.openapi/9.0.4/microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "/Users/Robert/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
