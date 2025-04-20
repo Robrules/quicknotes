@@ -1,13 +1,23 @@
-// immutable data carrier
-record Note(int Id, string Text, DateTime Created);
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
 
 // in-memory store (lives only while app runs)
 var notes = new List<Note>();
@@ -46,3 +56,6 @@ IResult DeleteNote(int id)
 }
 
 app.Run();
+
+// immutable data carrier
+record Note(int Id, string Text, DateTime Created);
