@@ -1,0 +1,8 @@
+/Users/Robert/Desktop/Main/quicknotes/QuickNotes.Api/obj/Debug/net9.0/QuickNotes.Api.csproj.AssemblyReference.cache
+/Users/Robert/Desktop/Main/quicknotes/QuickNotes.Api/obj/Debug/net9.0/QuickNotes.Api.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Robert/Desktop/Main/quicknotes/QuickNotes.Api/obj/Debug/net9.0/QuickNotes.Api.AssemblyInfoInputs.cache
+/Users/Robert/Desktop/Main/quicknotes/QuickNotes.Api/obj/Debug/net9.0/QuickNotes.Api.AssemblyInfo.cs
+/Users/Robert/Desktop/Main/quicknotes/QuickNotes.Api/obj/Debug/net9.0/QuickNotes.Api.csproj.CoreCompileInputs.cache
+/Users/Robert/Desktop/Main/quicknotes/QuickNotes.Api/obj/Debug/net9.0/QuickNotes.Api.MvcApplicationPartsAssemblyInfo.cs
+/Users/Robert/Desktop/Main/quicknotes/QuickNotes.Api/obj/Debug/net9.0/QuickNotes.Api.MvcApplicationPartsAssemblyInfo.cache
+/Users/Robert/Desktop/Main/quicknotes/QuickNotes.Api/obj/Debug/net9.0/QuickNotes.Api.sourcelink.json

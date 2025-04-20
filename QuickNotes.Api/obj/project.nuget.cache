@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ii1OrdmRVU8=",
+  "dgSpecHash": "IDKu9VUPeVk=",
   "success": true,
   "projectFilePath": "/Users/Robert/Desktop/Main/quicknotes/QuickNotes.Api/QuickNotes.Api.csproj",
   "expectedPackageFiles": [
-    "/Users/Robert/.nuget/packages/microsoft.aspnetcore.openapi/9.0.4/microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
-    "/Users/Robert/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+    "/Users/Robert/.nuget/packages/microsoft.netcore.app.ref/8.0.15/microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
+    "/Users/Robert/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.15/microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512",
+    "/Users/Robert/.nuget/packages/microsoft.netcore.app.host.osx-x64/8.0.15/microsoft.netcore.app.host.osx-x64.8.0.15.nupkg.sha512"
   ],
   "logs": []
 }

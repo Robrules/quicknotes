@@ -1,3 +1,6 @@
+// immutable data carrier
+record Note(int Id, string Text, DateTime Created);
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,36 +9,40 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// in-memory store (lives only while app runs)
+var notes = new List<Note>();
+
+// READ all notes
+app.MapGet("/notes", () => notes);
+
+// CREATE a note
+app.MapPost("/notes", CreateNote); 
+
+IResult CreateNote(Note n)
 {
-    app.MapOpenApi();
+    int nextId = notes.Count + 1;
+    DateTime now = DateTime.UtcNow;
+
+    var newNote = new Note(nextId, n.Text, now);
+    notes.Add(newNote);
+
+    return Results.Created($"/notes/{newNote.Id}", newNote);
 }
 
-app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+// DELETE a note
+app.MapDelete("/notes/{id:int}", DeleteNote);
 
-app.MapGet("/weatherforecast", () =>
+IResult DeleteNote(int id) 
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+    int removed = notes.RemoveAll(note => note.Id == id);
+
+    if (removed > 0) {
+        return Results.NoContent();  //204 = success
+    } else {
+        return Results.NotFound();  //404 = couldnt find it
+    }
+
+}
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
