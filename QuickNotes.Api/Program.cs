@@ -28,12 +28,12 @@ app.MapGet("/notes", () => notes);
 // CREATE a note
 app.MapPost("/notes", CreateNote); 
 
-IResult CreateNote(Note n)
+IResult CreateNote(string Text)
 {
     int nextId = notes.Count + 1;
     DateTime now = DateTime.UtcNow;
 
-    var newNote = new Note(nextId, n.Text, now);
+    var newNote = new Note(nextId, Text, now);
     notes.Add(newNote);
 
     return Results.Created($"/notes/{newNote.Id}", newNote);
