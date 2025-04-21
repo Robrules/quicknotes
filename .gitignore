@@ -1,0 +1,10 @@
+# .gitignore for QuickNotes
+
+# C# build artifacts
+QuickNotes.Api/bin/
+QuickNotes.Api/obj/
+*.db
+
+# Node & frontend build
+quicknotes-ui/node_modules/
+quicknotes-ui/dist/
