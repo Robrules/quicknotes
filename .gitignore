@@ -8,3 +8,6 @@ QuickNotes.Api/obj/
 # Node & frontend build
 quicknotes-ui/node_modules/
 quicknotes-ui/dist/
+
+# macOS files
+.DS_Store
